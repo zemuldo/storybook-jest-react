@@ -1,5 +1,8 @@
 import React from 'react';
-import { configure } from '@storybook/react';
+import { configure, addDecorator } from '@storybook/react';
+import Container from './Container';
+
+addDecorator(story => <Container story={story} />);
 
 configure(
   () => {

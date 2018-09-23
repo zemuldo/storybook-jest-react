@@ -2,6 +2,8 @@ import initStoryshots from '@storybook/addon-storyshots';
 
 initStoryshots({ /* configuration options */ });
 
+// Dates get changed in snapshots depending on timezone of bulding machine,
+// So we set a default date or moment for all dates.
 const DATE_TO_USE = new Date('2016');
 const _Date = Date;
 global.Date = jest.fn(() => DATE_TO_USE);
